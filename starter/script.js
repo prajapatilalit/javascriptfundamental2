@@ -140,40 +140,122 @@ GOOD LUCK 😀*/
 
 //object
 
+// const lalit = {
+//   firstName: "Lalit",
+//   lastName: "Prajapati",
+//   age: 30,
+//   job: "web developer",
+//   friends: ["Manish", "Shalni", "Jai Malhotra"],
+// };
+
+// console.log(lalit);
+// console.log(lalit.firstName);
+// console.log(lalit["lastName"]);
+// const nameKey = "Name";
+// console.log(lalit["first" + nameKey]);
+// console.log(lalit["last" + nameKey]);
+
+// const interestedIn = prompt(
+//   "what do you want to know about lalit ? Choose between firstName, lastName, age, job, friends"
+// );
+
+// if (lalit[interestedIn]) {
+//   console.log(lalit[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong Request ! Choose between firstName, lastName, age, job, friends"
+//   );
+// }
+
+// //adding property in the object by using dot and bracket notation
+
+// lalit.location = "India";
+// lalit["hobbies"] = "Playing Cricket";
+
+// console.log(lalit);
+
+// console.log(
+//   `${lalit.firstName} has ${lalit.friends.length} friends, and his best friend is called ${lalit.friends[0]}`
+// );
+
+//object method
+
 const lalit = {
   firstName: "Lalit",
   lastName: "Prajapati",
-  age: 30,
+  birthYear: 1991,
   job: "web developer",
   friends: ["Manish", "Shalni", "Jai Malhotra"],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   console.log(this);
+  //   return 2037 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.age}-year old ${
+      this.job
+    }, and he has ${this.hasDriversLicense ? "a " : "no "}driver's license`;
+  },
 };
 
-console.log(lalit);
-console.log(lalit.firstName);
-console.log(lalit["lastName"]);
-const nameKey = "Name";
-console.log(lalit["first" + nameKey]);
-console.log(lalit["last" + nameKey]);
+console.log(lalit.calcAge());
+console.log(lalit.age);
+console.log(lalit.age);
+console.log(lalit.age);
 
-const interestedIn = prompt(
-  "what do you want to know about lalit ? Choose between firstName, lastName, age, job, friends"
-);
+// console.log(lalit["calcAge"](1991));
 
-if (lalit[interestedIn]) {
-  console.log(lalit[interestedIn]);
+console.log(lalit.getSummary());
+
+//BMI calculation and comparision using object and object method
+
+//sangeeta kumari
+const sangeeta = {
+  fullName: "Sangeeta kumari",
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function () {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+
+// console.log(sangeeta.calcBMI());
+
+//gautam pal
+const gautam = {
+  fullName: "Gautam pal",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+
+// console.log(gautam.calcBMI());
+
+console.log(sangeeta.calcBMI(), gautam.calcBMI());
+
+if (sangeeta.calcBMI() > gautam.calcBMI()) {
+  console.log(
+    `${sangeeta.fullName}'s BMI (${sangeeta.BMI}) is higher than ${gautam.fullName}'s (${gautam.BMI})`
+  );
 } else {
   console.log(
-    "Wrong Request ! Choose between firstName, lastName, age, job, friends"
+    `${gautam.fullName}'s BMI (${gautam.BMI}) is higher than ${sangeeta.fullName}'s BMI (${sangeeta.BMI})`
   );
 }
-
-//adding property in the object by using dot and bracket notation
-
-lalit.location = "India";
-lalit["hobbies"] = "Playing Cricket";
-
-console.log(lalit);
-
-console.log(
-  `${lalit.firstName} has ${lalit.friends.length} friends, and his best friend is called ${lalit.friends[0]}`
-);
