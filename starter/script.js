@@ -180,82 +180,127 @@ GOOD LUCK 😀*/
 
 //object method
 
-const lalit = {
-  firstName: "Lalit",
-  lastName: "Prajapati",
-  birthYear: 1991,
-  job: "web developer",
-  friends: ["Manish", "Shalni", "Jai Malhotra"],
-  hasDriversLicense: true,
+// const lalit = {
+//   firstName: "Lalit",
+//   lastName: "Prajapati",
+//   birthYear: 1991,
+//   job: "web developer",
+//   friends: ["Manish", "Shalni", "Jai Malhotra"],
+//   hasDriversLicense: true,
 
-  // calcAge: function (birthYear) {
-  //   return 2037 - birthYear;
-  // },
+//   // calcAge: function (birthYear) {
+//   //   return 2037 - birthYear;
+//   // },
 
-  // calcAge: function () {
-  //   console.log(this);
-  //   return 2037 - this.birthYear;
-  // },
+//   // calcAge: function () {
+//   //   console.log(this);
+//   //   return 2037 - this.birthYear;
+//   // },
 
-  calcAge: function () {
-    this.age = 2037 - this.birthYear;
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
 
-  getSummary: function () {
-    return `${this.firstName} is a ${this.age}-year old ${
-      this.job
-    }, and he has ${this.hasDriversLicense ? "a " : "no "}driver's license`;
-  },
-};
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.age}-year old ${
+//       this.job
+//     }, and he has ${this.hasDriversLicense ? "a " : "no "}driver's license`;
+//   },
+// };
 
-console.log(lalit.calcAge());
-console.log(lalit.age);
-console.log(lalit.age);
-console.log(lalit.age);
+// console.log(lalit.calcAge());
+// console.log(lalit.age);
+// console.log(lalit.age);
+// console.log(lalit.age);
 
-// console.log(lalit["calcAge"](1991));
+// // console.log(lalit["calcAge"](1991));
 
-console.log(lalit.getSummary());
+// console.log(lalit.getSummary());
 
-//BMI calculation and comparision using object and object method
+// //BMI calculation and comparision using object and object method
 
-//sangeeta kumari
-const sangeeta = {
-  fullName: "Sangeeta kumari",
-  mass: 78,
-  height: 1.69,
+// //sangeeta kumari
+// const sangeeta = {
+//   fullName: "Sangeeta kumari",
+//   mass: 78,
+//   height: 1.69,
 
-  calcBMI: function () {
-    this.BMI = this.mass / this.height ** 2;
-    return this.BMI;
-  },
-};
+//   calcBMI: function () {
+//     this.BMI = this.mass / this.height ** 2;
+//     return this.BMI;
+//   },
+// };
 
 // console.log(sangeeta.calcBMI());
 
 //gautam pal
-const gautam = {
-  fullName: "Gautam pal",
-  mass: 92,
-  height: 1.95,
+// const gautam = {
+//   fullName: "Gautam pal",
+//   mass: 92,
+//   height: 1.95,
 
-  calcBMI: function () {
-    this.BMI = this.mass / this.height ** 2;
-    return this.BMI;
-  },
-};
+//   calcBMI: function () {
+//     this.BMI = this.mass / this.height ** 2;
+//     return this.BMI;
+//   },
+// };
 
 // console.log(gautam.calcBMI());
 
-console.log(sangeeta.calcBMI(), gautam.calcBMI());
+// console.log(sangeeta.calcBMI(), gautam.calcBMI());
 
-if (sangeeta.calcBMI() > gautam.calcBMI()) {
-  console.log(
-    `${sangeeta.fullName}'s BMI (${sangeeta.BMI}) is higher than ${gautam.fullName}'s (${gautam.BMI})`
-  );
-} else {
-  console.log(
-    `${gautam.fullName}'s BMI (${gautam.BMI}) is higher than ${sangeeta.fullName}'s BMI (${sangeeta.BMI})`
-  );
+// if (sangeeta.calcBMI() > gautam.calcBMI()) {
+//   console.log(
+//     `${sangeeta.fullName}'s BMI (${sangeeta.BMI}) is higher than ${gautam.fullName}'s (${gautam.BMI})`
+//   );
+// } else {
+//   console.log(
+//     `${gautam.fullName}'s BMI (${gautam.BMI}) is higher than ${sangeeta.fullName}'s BMI (${sangeeta.BMI})`
+//   );
+// }
+
+//looping Array
+
+const lalit = [
+  "Lalit",
+  "Prajapati",
+  2037 - 1991,
+  "web developer",
+  ["amit", "vivek", "manish"],
+  true,
+];
+
+const types = [];
+for (let i = 0; i < lalit.length; i++) {
+  //reading lalit array
+  console.log(lalit[i], typeof lalit[i]);
+  //fill the array
+  // types[i] = typeof lalit[i];
+  types.push(typeof lalit[i]);
+}
+
+console.log(types);
+
+const years = [1991, 1989, 1996, 1999];
+const age = [];
+for (let i = 0; i < years.length; i++) {
+  age.push(2037 - years[i]);
+}
+console.log(age);
+
+//continue statement
+console.log("--only string--");
+for (let i = 0; i < lalit.length; i++) {
+  if (typeof lalit[i] !== "string") continue;
+
+  console.log(lalit[i], typeof lalit[i]);
+}
+
+//breaking statement
+console.log("--Breaking--");
+for (let i = 0; i < lalit.length; i++) {
+  if (typeof lalit[i] === "number") break;
+
+  console.log(lalit[i], typeof lalit[i]);
 }
