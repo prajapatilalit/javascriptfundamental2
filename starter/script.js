@@ -129,11 +129,51 @@ HINT: Remember that an array needs a value in each position, and that value can 
 
 GOOD LUCK 😀*/
 
-const calcTip = (bill) =>
-  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = (bill) =>
+//   bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-console.log(bills, tips, totals);
+// console.log(bills, tips, totals);
+
+//object
+
+const lalit = {
+  firstName: "Lalit",
+  lastName: "Prajapati",
+  age: 30,
+  job: "web developer",
+  friends: ["Manish", "Shalni", "Jai Malhotra"],
+};
+
+console.log(lalit);
+console.log(lalit.firstName);
+console.log(lalit["lastName"]);
+const nameKey = "Name";
+console.log(lalit["first" + nameKey]);
+console.log(lalit["last" + nameKey]);
+
+const interestedIn = prompt(
+  "what do you want to know about lalit ? Choose between firstName, lastName, age, job, friends"
+);
+
+if (lalit[interestedIn]) {
+  console.log(lalit[interestedIn]);
+} else {
+  console.log(
+    "Wrong Request ! Choose between firstName, lastName, age, job, friends"
+  );
+}
+
+//adding property in the object by using dot and bracket notation
+
+lalit.location = "India";
+lalit["hobbies"] = "Playing Cricket";
+
+console.log(lalit);
+
+console.log(
+  `${lalit.firstName} has ${lalit.friends.length} friends, and his best friend is called ${lalit.friends[0]}`
+);
