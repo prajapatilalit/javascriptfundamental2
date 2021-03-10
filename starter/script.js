@@ -262,45 +262,62 @@ GOOD LUCK 😀*/
 
 //looping Array
 
+// const lalit = [
+//   "Lalit",
+//   "Prajapati",
+//   2037 - 1991,
+//   "web developer",
+//   ["amit", "vivek", "manish"],
+//   true,
+// ];
+
+// const types = [];
+// for (let i = 0; i < lalit.length; i++) {
+//   //reading lalit array
+//   console.log(lalit[i], typeof lalit[i]);
+//   //fill the array
+//   // types[i] = typeof lalit[i];
+//   types.push(typeof lalit[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 1989, 1996, 1999];
+// const age = [];
+// for (let i = 0; i < years.length; i++) {
+//   age.push(2037 - years[i]);
+// }
+// console.log(age);
+
+// //continue statement
+// console.log("--only string--");
+// for (let i = 0; i < lalit.length; i++) {
+//   if (typeof lalit[i] !== "string") continue;
+
+//   console.log(lalit[i], typeof lalit[i]);
+// }
+
+// //breaking statement
+// console.log("--Breaking--");
+// for (let i = 0; i < lalit.length; i++) {
+//   if (typeof lalit[i] === "number") break;
+
+//   console.log(lalit[i], typeof lalit[i]);
+// }
+
+//loop Backward
+
 const lalit = [
   "Lalit",
   "Prajapati",
   2037 - 1991,
   "web developer",
   ["amit", "vivek", "manish"],
-  true,
 ];
 
-const types = [];
-for (let i = 0; i < lalit.length; i++) {
-  //reading lalit array
-  console.log(lalit[i], typeof lalit[i]);
-  //fill the array
-  // types[i] = typeof lalit[i];
-  types.push(typeof lalit[i]);
-}
+//1,2,...,4
+//4,3,...,1
 
-console.log(types);
-
-const years = [1991, 1989, 1996, 1999];
-const age = [];
-for (let i = 0; i < years.length; i++) {
-  age.push(2037 - years[i]);
-}
-console.log(age);
-
-//continue statement
-console.log("--only string--");
-for (let i = 0; i < lalit.length; i++) {
-  if (typeof lalit[i] !== "string") continue;
-
-  console.log(lalit[i], typeof lalit[i]);
-}
-
-//breaking statement
-console.log("--Breaking--");
-for (let i = 0; i < lalit.length; i++) {
-  if (typeof lalit[i] === "number") break;
-
-  console.log(lalit[i], typeof lalit[i]);
+for (let i = lalit.length - 1; i >= 0; i--) {
+  console.log(lalit[i]);
 }
